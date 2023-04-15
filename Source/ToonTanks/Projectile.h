@@ -26,6 +26,9 @@ private:
 	UPROPERTY(VisibleAnywhere, Category = "Combat")
 	class UProjectileMovementComponent* ProjectileMovement;
 
+	UPROPERTY(VisibleAnywhere, Category = "Combat")
+	class UParticleSystemComponent* ProjectileParticle;
+
 	UFUNCTION()
 	void OnHit(
 		UPrimitiveComponent* HitComp, 
@@ -37,6 +40,9 @@ private:
 
 	UPROPERTY(EditAnywhere)
 	float Damage = 50.f;
+
+	UPROPERTY(EditAnywhere, Category = "Combat")
+	class UParticleSystem* HitParticles;
 
 public:	
 	// Called every frame
